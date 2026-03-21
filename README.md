@@ -4,7 +4,7 @@ My name is Miguel im a servicedesk L2 support based in the phillipines.
 
 I troubleshoot mainly and build projects on my free time 
 
-my main tech stack would be python, linux mainly kali using VMroacle for network building. 
+my main tech stack would be python, linux mainly kali using VMroacle for network Architechture. 
 <!--
 **noobie017/Noobie017** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
