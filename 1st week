@@ -1,0 +1,17 @@
+#### Week tracker 
+
+Day 1–2: Initial home lab connectivity issues  Fixing Kali  Windows 10 communication (NAT network, ping not working)  
+RDP brute-force with Crowbar/Hydra  
+Basic Splunk + Universal Forwarder setup
+
+Day 3–4: Starting the MITRE ATT&CK Purple Teaming Project  Creating the GitHub repo (MITRE-ATTACK-Purple-Team-Lab)  
+First simulation: T1087.002 Account Discovery using CrackMapExec from Kali  
+Discovering the visibility gap (why CrackMapExec was not showing in logs)
+
+Day 5–6: Deep troubleshooting & learning phase  Splunk query optimization and debugging why logs weren’t showing properly  
+Understanding Sysmon limitations (EventID=1 vs EventID=3)  
+Identifying the need for better Sysmon configuration (SwiftOnSecurity)  
+Writing the "Visibility Gaps & Lessons Learned" section
+
+Day 7 (Today): Documentation & summarizing progress
+
