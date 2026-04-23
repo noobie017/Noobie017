@@ -1,0 +1,31 @@
+Purple Team Lab Progress SummaryOverall Goal: Build a hands-on Purple Team lab using Metasploit + Atomic Red Team + Sysmon + Splunk.Day 1–2: Initial Setup & MeterpreterGenerated Windows Meterpreter payload using msfvenom on Kali Linux.
+Set up listener with exploit/multi/handler.
+Struggled with SmartScreen/Defender blocking the payload.
+Successfully got a stable Meterpreter reverse TCP session on Windows 10 target.
+Executed basic Meterpreter commands (sysinfo, getuid, shell, powershell_execute).
+
+Techniques Completed:T1059.001 – PowerShell execution via Meterpreter
+T1059.003 – CMD shell via Meterpreter
+
+Day 3–4: Privilege EscalationPerformed T1134 – Access Token Manipulation using getsystem in Meterpreter.
+Achieved NT AUTHORITY\SYSTEM privileges.
+
+Day 5–6: PersistenceExecuted T1543.003 – Windows Service Creation.
+Used both Metasploit persistence modules and Atomic Red Team (Invoke-AtomicTest T1543).
+Documented service creation using sc.exe.
+
+Day 7–8: Defense EvasionExecuted T1562.001 – Impair Defenses (Disable Windows Defender) using Atomic Red Team.
+
+Splunk Configuration Journey (Biggest Challenge)Problem: Sysmon events were being ingested (150k+ events), but EventCode, Image, CommandLine, and other fields were not extracted → only raw XML was visible.
+
+Troubleshooting Steps We Did:Tried multiple sourcetype variations (XmlWinEventLog:Microsoft-Windows-Sysmon/Operational).
+Used raw XML rex extraction as temporary workaround.
+Edited inputs.conf on Windows Universal Forwarder multiple times.
+Changed renderXml = true → renderXml = false.
+Fixed source = ... → sourcetype = ....
+Restarted Splunk Universal Forwarder service several times.
+Observed IOWait warning in Splunk Health Report.
+
+Current Status: Still seeing mostly raw XML or 0 events in stats count by EventCode.
+Basic events are coming in, but field extraction is not fully working yet.
+
